@@ -775,7 +775,7 @@
 		8D1107320486CEB800E47090 /* nvALT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvALT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
 		9335C40C148EC7AC009CE623 /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
-		93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = "/Users/n8henrie/git/nv/../AutoHyperlinks Framework/build/Release/AutoHyperlinks.framework"; sourceTree = "<absolute>"; };
+		93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = ../adium/build/Release/AutoHyperlinks.framework; sourceTree = SOURCE_ROOT; };
 		934C3FAE14FDA069000D14BA /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
 		934C3FAF14FDA069000D14BA /* customclean.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = customclean.css; sourceTree = "<group>"; };
 		934C3FB014FDA069000D14BA /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
