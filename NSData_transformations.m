@@ -460,7 +460,7 @@
 	
 	[self setLength:finalLen];
 	
-	EVP_CIPHER_CTX_cleanup(&cipherContext);
+	EVP_CIPHER_CTX_reset(&cipherContext);
 	
 	return YES;
 }
@@ -512,7 +512,7 @@
 	
 	[self setLength:finalLen];
 	
-	EVP_CIPHER_CTX_cleanup(&cipherContext);
+    EVP_CIPHER_CTX_reset(&cipherContext);
 	
 	
 	return YES;
