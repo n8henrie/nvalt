@@ -2199,7 +2199,10 @@
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/openssl/1.0.2/lib/;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "-pg";
+				OTHER_CFLAGS = (
+					"-pg",
+					"-Wno-implicit-function-declaration",
+				);
 				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
 				PRODUCT_NAME = nvALT;
 				RUN_CLANG_STATIC_ANALYZER = YES;
