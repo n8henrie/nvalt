@@ -774,7 +774,7 @@
 		5CFF810913A536F7008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/Preferences.xib; sourceTree = "<group>"; };
 		6011E1852822436D0083027E /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib/libcrypto.1.1.dylib"; sourceTree = "<absolute>"; };
 		6011E1892822443B0083027E /* libz.1.2.12.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.12.dylib; path = /opt/homebrew/Cellar/zlib/1.2.12/lib/libz.1.2.12.dylib; sourceTree = "<absolute>"; };
-		606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = ../adium/build/Release/AutoHyperlinks.framework; sourceTree = "<group>"; };
+		606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = adium/build/Release/AutoHyperlinks.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* nvALT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvALT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
@@ -2122,9 +2122,7 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/opt/homebrew/opt/openssl/**",
-					../adium/build/release,
-					/opt/homebrew/opt/openssl/include/,
-					/opt/homebrew/opt/openssl/include/openssl,
+					adium/build/release,
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -2344,9 +2342,7 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/opt/homebrew/opt/openssl/**",
-					../adium/build/release,
-					/opt/homebrew/opt/openssl/include/,
-					/opt/homebrew/opt/openssl/include/openssl,
+					adium/build/release,
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
