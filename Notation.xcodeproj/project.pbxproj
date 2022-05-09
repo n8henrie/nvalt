@@ -222,8 +222,9 @@
 		5CF96E0C132EA29D0079B3FD /* NotationPrefsView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 21A2FA7A09DF64E9001AF0B5 /* NotationPrefsView.nib */; };
 		6011E1862822436D0083027E /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6011E1852822436D0083027E /* libcrypto.1.1.dylib */; };
 		6011E18A2822443B0083027E /* libz.1.2.12.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6011E1892822443B0083027E /* libz.1.2.12.dylib */; };
-		6011E195282245300083027E /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 6011E194282245300083027E /* Sparkle */; };
-		60961ED428297E580055EA4F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 60961ED328297E580055EA4F /* Sparkle */; };
+		606C70D82829966100EB4FCB /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 606C70D72829966100EB4FCB /* Sparkle */; };
+		606C70E1282998AE00EB4FCB /* AutoHyperlinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */; };
+		606C70E2282998AE00EB4FCB /* AutoHyperlinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60961ED528297EDB0055EA4F /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C367F3C1DA2C2B20043C8EC /* libssl.a */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -270,15 +271,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		213FB6AD0B52E1B2004C74BD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5C96F565131C35A300A2E4AC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +288,17 @@
 				5C96F56D131C35AB00A2E4AC /* url_helpers.py in CopyFiles */,
 				5C96F56E131C35AB00A2E4AC /* url_helpers.pyc in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		606C70E3282998AE00EB4FCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				606C70E2282998AE00EB4FCB /* AutoHyperlinks.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -345,7 +348,6 @@
 		212DCF600A6DEECB00F74E46 /* DeletionManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DeletionManager.m; sourceTree = "<group>"; };
 		213621EF0B92414F008C0830 /* MultiTextFinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MultiTextFinder.h; sourceTree = "<group>"; };
 		213621F00B92414F008C0830 /* MultiTextFinder.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MultiTextFinder.m; sourceTree = "<group>"; };
-		213623E50B92AA4E008C0830 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		21395BB30B7FDB85007BCFAA /* Notation.freqorder */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Notation.freqorder; sourceTree = "<group>"; };
 		21395BC60B7FDD35007BCFAA /* Notation.launchorder */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Notation.launchorder; sourceTree = "<group>"; };
 		213FAD510B3C6B52004C74BD /* FSExchangeObjectsCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSExchangeObjectsCompat.h; sourceTree = "<group>"; };
@@ -772,12 +774,11 @@
 		5CFF810913A536F7008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/Preferences.xib; sourceTree = "<group>"; };
 		6011E1852822436D0083027E /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib/libcrypto.1.1.dylib"; sourceTree = "<absolute>"; };
 		6011E1892822443B0083027E /* libz.1.2.12.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.12.dylib; path = /opt/homebrew/Cellar/zlib/1.2.12/lib/libz.1.2.12.dylib; sourceTree = "<absolute>"; };
-		6011E18D282244B60083027E /* Notation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Notation.xcodeproj; sourceTree = "<group>"; };
+		606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = ../adium/build/Release/AutoHyperlinks.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* nvALT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvALT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
 		9335C40C148EC7AC009CE623 /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
-		93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoHyperlinks.framework; path = ../adium/build/Release/AutoHyperlinks.framework; sourceTree = SOURCE_ROOT; };
 		934C3FAE14FDA069000D14BA /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
 		934C3FAF14FDA069000D14BA /* customclean.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = customclean.css; sourceTree = "<group>"; };
 		934C3FB014FDA069000D14BA /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
@@ -833,10 +834,10 @@
 				21F459AD0A92E01D00FB6FFE /* Carbon.framework in Frameworks */,
 				60961ED528297EDB0055EA4F /* libssl.a in Frameworks */,
 				214493F60ADB892C00E2A2B6 /* CoreServices.framework in Frameworks */,
+				606C70E1282998AE00EB4FCB /* AutoHyperlinks.framework in Frameworks */,
 				214495030ADC7C8D00E2A2B6 /* SecurityInterface.framework in Frameworks */,
 				21973FF10B0060C80046683E /* Security.framework in Frameworks */,
-				60961ED428297E580055EA4F /* Sparkle in Frameworks */,
-				6011E195282245300083027E /* Sparkle in Frameworks */,
+				606C70D82829966100EB4FCB /* Sparkle in Frameworks */,
 				210C07530B6BF0A2005D23A8 /* WebKit.framework in Frameworks */,
 				21D583620B78F0CC00245E29 /* ApplicationServices.framework in Frameworks */,
 				219D254A1113FE34005E7DF5 /* SystemConfiguration.framework in Frameworks */,
@@ -950,9 +951,7 @@
 			children = (
 				5C367F3C1DA2C2B20043C8EC /* libssl.a */,
 				6011E1892822443B0083027E /* libz.1.2.12.dylib */,
-				93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */,
 				21B54C011134F2E800E163A1 /* IOKit.framework */,
-				213623E50B92AA4E008C0830 /* Sparkle.framework */,
 				210C07230B6BF0A1005D23A8 /* WebKit.framework */,
 				21973FBC0B0060C80046683E /* Security.framework */,
 				214494F80ADC7C8D00E2A2B6 /* SecurityInterface.framework */,
@@ -1326,7 +1325,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6011E18D282244B60083027E /* Notation.xcodeproj */,
+				606C70DD2829988B00EB4FCB /* AutoHyperlinks.framework */,
 				6011E1852822436D0083027E /* libcrypto.1.1.dylib */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -1413,11 +1412,6 @@
 			path = readability;
 			sourceTree = "<group>";
 		};
-		6011E18E282244B60083027E /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
 		93B90E7D138601C100BEC5FB /* ODBEditor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1442,7 +1436,7 @@
 				5C96F565131C35A300A2E4AC /* CopyFiles */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				213FB6AD0B52E1B2004C74BD /* CopyFiles */,
+				606C70E3282998AE00EB4FCB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1450,8 +1444,7 @@
 			);
 			name = Notation;
 			packageProductDependencies = (
-				6011E194282245300083027E /* Sparkle */,
-				60961ED328297E580055EA4F /* Sparkle */,
+				606C70D72829966100EB4FCB /* Sparkle */,
 			);
 			productInstallPath = "$(HOME)/Applications";
 			productName = Notation;
@@ -1492,16 +1485,9 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Notation */;
 			packageReferences = (
-				6011E193282245300083027E /* XCRemoteSwiftPackageReference "Sparkle" */,
-				60961ED228297E580055EA4F /* XCRemoteSwiftPackageReference "Sparkle" */,
+				606C70D32829922B00EB4FCB /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6011E18E282244B60083027E /* Products */;
-					ProjectRef = 6011E18D282244B60083027E /* Notation.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Notation */,
@@ -2130,14 +2116,31 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A737DHLE5S;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"/opt/homebrew/opt/openssl/**",
+					../adium/build/release,
+					/opt/homebrew/opt/openssl/include/,
+					/opt/homebrew/opt/openssl/include/openssl,
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					ICU/icu,
+					"/opt/homebrew/opt/openssl/include/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					/opt/homebrew/opt/zlib/lib,
 					/opt/homebrew/opt/openssl/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = net.elasticthreads.nv;
 			};
 			name = Development;
@@ -2145,6 +2148,7 @@
 		212B842809780B5000F3597F /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -2218,7 +2222,7 @@
 				IBC_STRIP_NIBS = NO;
 				INFOPLIST_FILE = Info.plist;
 				LD_GENERATE_MAP_FILE = YES;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/openssl/1.0.2/lib/;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/opt/openssl/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -2240,6 +2244,7 @@
 		5C9CB58B134A7F0400073277 /* ForBuilding */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -2306,7 +2311,7 @@
 					"$(PROJECT_DIR)/library/**",
 				);
 				INFOPLIST_FILE = Info.plist;
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/openssl/1.0.2/lib/;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/opt/openssl/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
 				PRODUCT_NAME = nvALT;
@@ -2333,14 +2338,31 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A737DHLE5S;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"/opt/homebrew/opt/openssl/**",
+					../adium/build/release,
+					/opt/homebrew/opt/openssl/include/,
+					/opt/homebrew/opt/openssl/include/openssl,
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					ICU/icu,
+					"/opt/homebrew/opt/openssl/include/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					/opt/homebrew/opt/zlib/lib,
 					/opt/homebrew/opt/openssl/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = net.elasticthreads.nv;
 			};
 			name = ForBuilding;
@@ -2369,33 +2391,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6011E193282245300083027E /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+		606C70D32829922B00EB4FCB /* XCRemoteSwiftPackageReference "Sparkle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
-				branch = 2.x;
-				kind = branch;
-			};
-		};
-		60961ED228297E580055EA4F /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				branch = 2.x;
-				kind = branch;
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6011E194282245300083027E /* Sparkle */ = {
+		606C70D72829966100EB4FCB /* Sparkle */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6011E193282245300083027E /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
-		};
-		60961ED328297E580055EA4F /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6011E193282245300083027E /* XCRemoteSwiftPackageReference "Sparkle" */;
+			package = 606C70D32829922B00EB4FCB /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
 		};
 /* End XCSwiftPackageProductDependency section */
