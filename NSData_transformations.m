@@ -211,7 +211,9 @@
 }
 
 - (NSData*)MD5Digest {
-	EVP_MD_CTX mdctx;
+	EVP_MD_CTX *mdctx;
+    mdctx = EVP_MD_CTX_new();
+
 	unsigned char md_value[EVP_MAX_MD_SIZE];
 	unsigned int md_len;
 	EVP_DigestInit(&mdctx, EVP_md5());
@@ -418,7 +420,8 @@
 - (BOOL)encryptDataWithCipher:(const EVP_CIPHER*)cipher key:(NSData*)key iv:(NSData*)iv {
 	int originalDataLength = [self length];
 	
-	EVP_CIPHER_CTX cipherContext;
+	EVP_CIPHER_CTX *cipherContext;
+    cipherContext = EVP_CIPHER_CTX_new();
 	if (!EVP_EncryptInit(&cipherContext, cipher /*EVP_aes_256_cbc()*/, NULL, NULL)) {
 		NSLog(@"Couldn't initialization encryption?");
 		return NO;
@@ -468,7 +471,8 @@
 - (BOOL)decryptDataWithCipher:(const EVP_CIPHER*)cipher key:(NSData*)key iv:(NSData*)iv {
 	int originalDataLength = [self length];
 	
-	EVP_CIPHER_CTX cipherContext;
+	EVP_CIPHER_CTX *cipherContext;
+    cipherContext = EVP_CIPHER_CTX_new();
 	if (!EVP_DecryptInit(&cipherContext, cipher /*EVP_aes_256_cbc()*/, NULL, NULL)) {
 		NSLog(@"Couldn't initialize decryption?");
 		return NO;
