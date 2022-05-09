@@ -224,6 +224,7 @@
 		6011E18A2822443B0083027E /* libz.1.2.12.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6011E1892822443B0083027E /* libz.1.2.12.dylib */; };
 		6011E195282245300083027E /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 6011E194282245300083027E /* Sparkle */; };
 		60961ED428297E580055EA4F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 60961ED328297E580055EA4F /* Sparkle */; };
+		60961ED528297EDB0055EA4F /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C367F3C1DA2C2B20043C8EC /* libssl.a */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -830,6 +831,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				21F459AD0A92E01D00FB6FFE /* Carbon.framework in Frameworks */,
+				60961ED528297EDB0055EA4F /* libssl.a in Frameworks */,
 				214493F60ADB892C00E2A2B6 /* CoreServices.framework in Frameworks */,
 				214495030ADC7C8D00E2A2B6 /* SecurityInterface.framework in Frameworks */,
 				21973FF10B0060C80046683E /* Security.framework in Frameworks */,
@@ -2133,6 +2135,7 @@
 					"$(PROJECT_DIR)",
 					"/opt/homebrew/Cellar/openssl@1.1/1.1.1n/lib",
 					/opt/homebrew/opt/zlib/lib,
+					"/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				OTHER_LDFLAGS = "";
@@ -2336,6 +2339,7 @@
 					"$(PROJECT_DIR)",
 					"/opt/homebrew/Cellar/openssl@1.1/1.1.1n/lib",
 					/opt/homebrew/opt/zlib/lib,
+					"/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				OTHER_LDFLAGS = "";
