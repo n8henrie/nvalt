@@ -2133,9 +2133,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"/opt/homebrew/Cellar/openssl@1.1/1.1.1n/lib",
 					/opt/homebrew/opt/zlib/lib,
-					"/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib",
+					/opt/homebrew/opt/openssl/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				OTHER_LDFLAGS = "";
@@ -2337,9 +2336,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"/opt/homebrew/Cellar/openssl@1.1/1.1.1n/lib",
 					/opt/homebrew/opt/zlib/lib,
-					"/opt/homebrew/Cellar/openssl@1.1/1.1.1o/lib",
+					/opt/homebrew/opt/openssl/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				OTHER_LDFLAGS = "";
