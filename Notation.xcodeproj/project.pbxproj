@@ -2121,7 +2121,7 @@
 					"\"Auto-Hyperlinks/Build Results/Release\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu89;
-				LD_RUNPATH_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = result/lib;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				OTHER_LDFLAGS = "";
@@ -2326,7 +2326,7 @@
 					"\"Auto-Hyperlinks/Build Results/Release\"/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu89;
-				LD_RUNPATH_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = result/lib;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				OTHER_CFLAGS = "";
