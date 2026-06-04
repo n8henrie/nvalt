@@ -12,6 +12,7 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
+      - uses: DeterminateSystems/nix-installer-action@v14
       - uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -24,6 +25,7 @@ jobs:
             build
       - name: build nvalt
         run: |
+          nix build .#deps
           xcodebuild \
             -target Notation \
             -configuration ForBuilding \
