@@ -48,9 +48,6 @@ build/*
 <<<<<<< HEAD
 =======
 
->>>>>>> another gitignore
-SimperiumConfig.h
-
 *.pbxproj
 nvalt.taskpaper
 
