@@ -1,0 +1,42 @@
+---
+name: build
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: build AutoHyperlinks
+        working-directory: Auto-Hyperlinks
+        run: |
+          xcodebuild \
+            -target AutoHyperlinks.framework \
+            -configuration Release \
+            build
+      - name: build nvalt
+        run: |
+          xcodebuild \
+            -target Notation \
+            -configuration ForBuilding \
+            -scheme 'Notation Release' \
+            -archivePath ./nvalt.xcarchive \
+            archive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nvALT
+          path: nvalt.xcarchive/Products/Applications/nvALT.app
+      - name: release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            nvalt.xcarchive/Products/Applications/nvALT.app
