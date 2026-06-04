@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: DeterminateSystems/nix-installer-action@v22
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: build AutoHyperlinks
