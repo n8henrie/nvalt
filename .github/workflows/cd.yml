@@ -20,12 +20,15 @@ jobs:
         with:
           submodules: recursive
       - name: build AutoHyperlinks
-        working-directory: Auto-Hyperlinks
+        working-directory: adium/Frameworks/AutoHyperlinks Framework
         run: |
           xcodebuild \
-            -target AutoHyperlinks.framework \
-            -configuration Release \
-            build
+            -project AutoHyperlinks.framework.xcodeproj \
+             -target AutoHyperlinks.framework \
+             -configuration Release \
+             VALID_ARCHS=arm64 \
+             ARCHS=arm64 \
+             build
       - name: build nvalt
         run: |
           nix build .#deps

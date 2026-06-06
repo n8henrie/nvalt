@@ -1,3 +1,6 @@
-[submodule "Auto-Hyperlinks"]
-	path = Auto-Hyperlinks
-	url = https://github.com/Codeux-Software/Auto-Hyperlinks.git
+[submodule "adium"]
+	path = adium
+	url = https://github.com/adium/adium
+[submodule "MultiMarkdown-4"]
+	path = MultiMarkdown-4
+	url = https://github.com/fletcher/MultiMarkdown-4.git
