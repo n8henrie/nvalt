@@ -230,7 +230,6 @@
 		93099628138BD61000368C45 /* tp2md.rb in Resources */ = {isa = PBXBuildFile; fileRef = 93099627138BD61000368C45 /* tp2md.rb */; };
 		93365DDF1D9AD651005A230B /* AutoHyperlinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */; };
 		93365DE01D9AD6AA005A230B /* AutoHyperlinks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93365DDE1D9AD651005A230B /* AutoHyperlinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		93365DE11D9AD97B005A230B /* multimarkdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9335C40C148EC7AC009CE623 /* multimarkdown */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		934C3FB214FDA069000D14BA /* custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FAE14FDA069000D14BA /* custom.css */; };
 		934C3FB314FDA06A000D14BA /* customclean.css in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FAF14FDA069000D14BA /* customclean.css */; };
 		934C3FB414FDA06A000D14BA /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FB014FDA069000D14BA /* template.html */; };
@@ -287,7 +286,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				93365DE11D9AD97B005A230B /* multimarkdown in CopyFiles */,
 				5C96F566131C35AB00A2E4AC /* __init__.py in CopyFiles */,
 				5C96F567131C35AB00A2E4AC /* BeautifulSoup.py in CopyFiles */,
 				5C96F568131C35AB00A2E4AC /* BeautifulSoup.pyc in CopyFiles */,
@@ -1431,11 +1429,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 212B842309780B5000F3597F /* Build configuration list for PBXNativeTarget "Notation" */;
 			buildPhases = (
+				60919B6E2FD5BF1200A099D6 /* nix build deps */,
 				8D1107290486CEB800E47090 /* Resources */,
 				5C96F565131C35A300A2E4AC /* CopyFiles */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				213FB6AD0B52E1B2004C74BD /* CopyFiles */,
+				60919B6F2FD5BF6A00A099D6 /* copy multimarkdown */,
 			);
 			buildRules = (
 			);
@@ -1632,6 +1632,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60919B6E2FD5BF1200A099D6 /* nix build deps */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/flake.nix",
+				"$(SRCROOT)/flake.lock",
+				"$(SRCROOT)/mmd4.nix",
+			);
+			name = "nix build deps";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/result",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/run/current-system/sw/bin/nix build .#deps\n";
+		};
+		60919B6F2FD5BF6A00A099D6 /* copy multimarkdown */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/result/bin/multimarkdown",
+			);
+			name = "copy multimarkdown";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/multimarkdown",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# xcode \"copy files\" resolves symlinks, which we don't want here\n\ndest=\"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\ncp result/bin/multimarkdown \"${dest}/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
