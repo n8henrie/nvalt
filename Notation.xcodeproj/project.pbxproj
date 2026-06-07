@@ -59,7 +59,7 @@
 		218D43330AA2ABC600F36CCA /* NotesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191930209CFBEBD00586B15 /* NotesTableView.m */; };
 		21918FD009C49B2500586B15 /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21918FCE09C49B2400586B15 /* EmptyView.m */; };
 		219190F109C4A60700586B15 /* DualField.m in Sources */ = {isa = PBXBuildFile; fileRef = 219190F009C4A60700586B15 /* DualField.m */; };
-		2191926709C52AA600586B15 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2191926609C52AA600586B15 /* libz.dylib */; };
+		2191926709C52AA600586B15 /* libz.1.2.12.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2191926609C52AA600586B15 /* libz.1.2.12.dylib */; };
 		219192D409CFBC8800586B15 /* NoteAttributeColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 219192D309CFBC8700586B15 /* NoteAttributeColumn.m */; };
 		2191982209D607C600586B15 /* PrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191982109D607C600586B15 /* PrefsWindowController.m */; };
 		219588D20961D7F200972B8C /* LinkingEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 219588D10961D7F200972B8C /* LinkingEditor.m */; };
@@ -405,7 +405,7 @@
 		21918FCF09C49B2500586B15 /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = SOURCE_ROOT; };
 		219190EF09C4A60600586B15 /* DualField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DualField.h; sourceTree = "<group>"; };
 		219190F009C4A60700586B15 /* DualField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DualField.m; sourceTree = "<group>"; };
-		2191926609C52AA600586B15 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
+		2191926609C52AA600586B15 /* libz.1.2.12.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.12.dylib; path = /usr/lib/libz.1.2.12.dylib; sourceTree = "<absolute>"; };
 		219192D209CFBC8700586B15 /* NoteAttributeColumn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NoteAttributeColumn.h; sourceTree = "<group>"; };
 		219192D309CFBC8700586B15 /* NoteAttributeColumn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NoteAttributeColumn.m; sourceTree = "<group>"; };
 		2191930109CFBEBD00586B15 /* NotesTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NotesTableView.h; sourceTree = "<group>"; };
@@ -840,7 +840,7 @@
 				219D254A1113FE34005E7DF5 /* SystemConfiguration.framework in Frameworks */,
 				21B54C021134F2E800E163A1 /* IOKit.framework in Frameworks */,
 				93365DDF1D9AD651005A230B /* AutoHyperlinks.framework in Frameworks */,
-				2191926709C52AA600586B15 /* libz.dylib in Frameworks */,
+				2191926709C52AA600586B15 /* libz.1.2.12.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,7 +954,7 @@
 				214493E70ADB892C00E2A2B6 /* CoreServices.framework */,
 				21F4599B0A92E01C00FB6FFE /* Carbon.framework */,
 				21D5834D0B78F0CC00245E29 /* ApplicationServices.framework */,
-				2191926609C52AA600586B15 /* libz.dylib */,
+				2191926609C52AA600586B15 /* libz.1.2.12.dylib */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				219D25491113FE34005E7DF5 /* SystemConfiguration.framework */,
