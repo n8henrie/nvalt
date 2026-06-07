@@ -31,8 +31,6 @@ jobs:
              build
       - name: build nvalt
         run: |
-          set -x
-          type -a nix
           nix build .#deps
           xcodebuild \
             -target Notation \

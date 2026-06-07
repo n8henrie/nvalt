@@ -1654,7 +1654,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/run/current-system/sw/bin/nix build .#deps\n";
+			shellScript = "PATH=/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin \\\n    nix build .#deps\n";
 		};
 		60919B6F2FD5BF6A00A099D6 /* copy multimarkdown */ = {
 			isa = PBXShellScriptBuildPhase;
