@@ -1652,7 +1652,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -Eeuf -o pipefail\n\nEXE=$TARGET_BUILD_DIR/$EXECUTABLE_PATH\nFRAMEWORKSDIR=$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\n\notool -L \"$EXE\" |\n    awk '/\\/nix\\/store/ { print $1 }' |\n    while read -r pth; do\n      /bin/cp -c \"${pth}\" \"$FRAMEWORKSDIR\"\n      bn=$(basename \"${pth}\")\n      install_name_tool -change \"${pth}\" \"@rpath/${bn}\" \"$EXE\"\n    done\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -Eeuf -o pipefail\n\nEXE=$TARGET_BUILD_DIR/$EXECUTABLE_PATH\nFRAMEWORKSDIR=$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\n\notool -L \"$EXE\" |\n    awk '/\\/nix\\/store/ { print $1 }' |\n    while read -r pth; do\n      # avoid cross-device link error in CI\n      /bin/cp -c \"${pth}\" \"$FRAMEWORKSDIR\" || cp \"${pth}\" \"$FRAMEWORKSDIR\"\n      bn=$(basename \"${pth}\")\n      install_name_tool -change \"${pth}\" \"@rpath/${bn}\" \"$EXE\"\n    done\n";
 		};
 		60919B6E2FD5BF1200A099D6 /* nix build deps */ = {
 			isa = PBXShellScriptBuildPhase;
