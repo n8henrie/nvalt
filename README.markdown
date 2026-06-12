@@ -1,3 +1,37 @@
+NB: @n8henrie's fork
+
+Trying to keep nvALT alive by providing a CI-built version.
+
+Please keep in mind:
+
+- this project relies on a *very* old and insecure version of OpenSSL.
+- the CI build will *not* work with SimpleNote as is
+- to build locally you'll need `nix`
+
+When you try to open the application, you will likely be greeted by a warning along the lines of:
+
+- nvALT can't be opened because it is from an unidentified developer
+- nvALT can't be opened because the developer cannot be verified
+- nvALT can't be opened because Apple cannot check it for malicious software
+- Apple could not verify "nvALT.app" is free of malware that may harm your Mac or compromise your privacy
+
+An application must be signed by an Apple-provided developer certificate to avoid these warnings; these cost $100 / year and I do not have one at this point.
+
+Luckily these warnings can be worked around and should be a one-time-only nuisance.
+
+To open the application:
+
+- right click (or control-click) the app and choose `Open`
+- you'll likely have to approve a security warning pop-up
+
+To make this change permanent, after doing the above:
+
+- open `System Settings`
+- go to the `Privacy & Security` settings
+- scroll down and find the `Open Anyway` button for nvALT
+
+For more information, please review Apple's official guidance on this process: <https://support.apple.com/en-us/102445>
+
 # nvALT 2
 
 A collaboration between Brett Terpstra (ttscoff) and David Halter (ElasticThreads) based on [DivineDominion's](github.com/divineDominion/nv) fork. nvALT adds a few features we'd been looking for (and let me get some coding practice).
