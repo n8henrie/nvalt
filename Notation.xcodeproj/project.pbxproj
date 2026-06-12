@@ -1436,6 +1436,7 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				213FB6AD0B52E1B2004C74BD /* CopyFiles */,
 				60919B6F2FD5BF6A00A099D6 /* copy multimarkdown */,
+				6040A18F2FDC5650009B25C4 /* copy libs and fix runpath */,
 			);
 			buildRules = (
 			);
@@ -1634,6 +1635,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6040A18F2FDC5650009B25C4 /* copy libs and fix runpath */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "copy libs and fix runpath";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -Eeuf -o pipefail\n\nEXE=$TARGET_BUILD_DIR/$EXECUTABLE_PATH\nFRAMEWORKSDIR=$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\n\notool -L \"$EXE\" |\n    awk '/\\/nix\\/store/ { print $1 }' |\n    while read -r pth; do\n      /bin/cp -c \"${pth}\" \"$FRAMEWORKSDIR\"\n      bn=$(basename \"${pth}\")\n      install_name_tool -change \"${pth}\" \"@rpath/${bn}\" \"$EXE\"\n    done\n";
+		};
 		60919B6E2FD5BF1200A099D6 /* nix build deps */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
